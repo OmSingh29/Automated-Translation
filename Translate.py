@@ -12,7 +12,7 @@ text="Pritam's real name is Jhaatu"
 
 dest='HINDI'
 
-d={'ENGLISH':0,'HINDI':1}
+d={'ENGLISH':0,'HINDI':1,'BENGALI':2}
 
 ind_source=d[source]
 
@@ -23,7 +23,7 @@ options.add_argument("--disable-notifications")
 options.add_argument("--disable-extensions")
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
 options.add_argument("--incognito") 
-options.add_argument("--headless") 
+#options.add_argument("--headless") 
 
 driver = webdriver.Chrome(options=options)
 
@@ -37,7 +37,7 @@ drop_down_source=WebDriverWait(driver, 60).until(EC.presence_of_element_located(
 drop_down_source.click()
 sleep(1)
 
-xpath_source=['//*[@id="yDmH0d"]/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[2]/c-wiz/div[1]/div/div[3]/div/div[3]/span[58]/div[1]','//*[@id="yDmH0d"]/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[2]/c-wiz/div[1]/div/div[3]/div/div[3]/span[84]/div[1]']
+xpath_source=['//*[@id="yDmH0d"]/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[2]/c-wiz/div[1]/div/div[3]/div/div[3]/span[58]/div[1]','//*[@id="yDmH0d"]/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[2]/c-wiz/div[1]/div/div[3]/div/div[3]/span[84]/div[1]','//*[@id="yDmH0d"]/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[2]/c-wiz/div[1]/div/div[3]/div/div[3]/span[27]/div[1]']
 lang_source=WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH,xpath_source[ind_source])))
 lang_source.click()
 sleep(1)
@@ -47,7 +47,7 @@ drop_down_dest=WebDriverWait(driver, 60).until(EC.presence_of_element_located((B
 drop_down_dest.click()
 sleep(1)
 
-xpath_dest=['//*[@id="yDmH0d"]/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[2]/c-wiz/div[2]/div/div[3]/div/div[2]/span[58]/div[1]','//*[@id="yDmH0d"]/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[2]/c-wiz/div[2]/div/div[3]/div/div[2]/span[84]/div[1]']
+xpath_dest=['//*[@id="yDmH0d"]/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[2]/c-wiz/div[2]/div/div[3]/div/div[2]/span[58]/div[1]','//*[@id="yDmH0d"]/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[2]/c-wiz/div[2]/div/div[3]/div/div[2]/span[84]/div[1]','//*[@id="yDmH0d"]/c-wiz/div/div[2]/c-wiz/div[2]/c-wiz/div[1]/div[1]/c-wiz/div[2]/c-wiz/div[2]/div/div[3]/div/div[2]/span[27]/div[1]']
 lang_dest=WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.XPATH,xpath_dest[ind_dest])))
 lang_dest.click()
 sleep(1)
