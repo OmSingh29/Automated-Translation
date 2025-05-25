@@ -1,6 +1,6 @@
 # 🌐 Google Translate Automation using Selenium
 
-This Python script uses **Selenium WebDriver** to automate translations on [Google Translate](https://translate.google.co.in). It simulates browser interactions to select source and destination languages, enter text, and fetch the translated result.
+This Python script uses **Selenium WebDriver** to automate translations on [Google Translator](https://translate.google.co.in). It simulates browser interactions to select source and destination languages, enter text, and fetch the translated result.
 
 ---
 
