@@ -8,7 +8,7 @@ from time import sleep
 
 source='ENGLISH'
 
-text="Pritam's real name is Jhaatu"
+text="Pritam's real name is Bengali"
 
 dest='HINDI'
 
